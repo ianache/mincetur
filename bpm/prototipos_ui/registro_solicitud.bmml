@@ -1,0 +1,9 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="850" measuredH="188" mockupW="657" mockupH="81">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::DataGrid" x="193" y="107" w="-1" h="-1" measuredW="657" measuredH="81" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>No%2C%20Requisito%0A1%2C%20Fotocopia%20del%20poder%20vigente%20del%20representante%20legal%20de%20la%20entidad%20solicitante%5C%2C%20inscrito%20en%20RRPP%0A2%2C%20Copia%20literal%20vigente%20de%20la%20partida%20registrar%20donde%20se%20encuentra%20inscrita%20la%20sociedad%5C%2C%20expedida%20por%20RRPP</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
