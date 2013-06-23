@@ -1,0 +1,56 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>mincetur-dgjcmt</groupId>
+	<artifactId>basedatos</artifactId>
+	<version>1.0.0</version>
+  <packaging>jar</packaging>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>sql-maven-plugin</artifactId>
+        <version>1.5</version>
+        
+        <dependencies>
+          <dependency>
+            <groupId>oracle</groupId>
+            <artifactId>jdbc</artifactId>
+            <version>11.2.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/oracle/jdbc/11.2.0/jdbc-11.2.0.jar</systemPath>
+          </dependency>
+        </dependencies>
+        
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <onError>continue</onError>
+              <autocommit>true</autocommit>
+              <driver>oracle.jdbc.driver.OracleDriver</driver>
+              <url>jdbc:oracle:thin:@localhost:1521:xe</url>
+              <username>bd_dgjcmt</username>
+              <password>welcome1</password>
+              <srcFiles>
+                <srcFile>esquema.sql</srcFile>
+                <!--srcFile>data_inicial.sql</srcFile-->
+              </srcFiles>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <repositories>
+    <repository>
+      <id>local_repo</id>
+      <name>local repository</name>
+      <url>file://${project.basedir}\libs</url>
+    </repository>
+  </repositories>
+</project>
